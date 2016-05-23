@@ -1,0 +1,30 @@
+create extension generate_date_series;
+SET datestyle TO iso;
+SELECT d.date_val FROM generate_date_series('1991-09-24'::date,'1991-10-01'::date) as d(date_val);
+  date_val  
+------------
+ 1991-09-24
+ 1991-09-25
+ 1991-09-26
+ 1991-09-27
+ 1991-09-28
+ 1991-09-29
+ 1991-09-30
+ 1991-10-01
+(8 rows)
+
+SELECT d.date_val FROM generate_date_series('1991-09-24'::date,'1991-10-02'::date,7) as d(date_val);
+  date_val  
+------------
+ 1991-09-24
+ 1991-10-01
+(2 rows)
+
+SELECT d.date_val FROM generate_date_series('1999-12-31'::date,'1999-12-29'::date,-1) as d(date_val);
+  date_val  
+------------
+ 1999-12-31
+ 1999-12-30
+ 1999-12-29
+(3 rows)
+

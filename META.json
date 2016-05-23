@@ -1,0 +1,43 @@
+{
+    "name": "generate_date_series",
+    "abstract": "generate_series() for date types",
+    "description": "a generate_series()-like function that takes date ranges and integer intervals (in number of days)",
+    "version": "1.0.0",
+    "maintainer": [ "Corey Huinker <corey.huinker@moat.com>" ],
+    "license": "postgresql",
+    "generated_by": "Corey Huinker",
+    "provides": {
+        "generate_date_series": {
+            "abstract": "generate_series() for date types",
+            "file": "sql/generate_date_series.sql",
+            "docfile": "doc/generate_date_series.md",
+            "version": "1.0.0"
+        }
+    },
+    "release_status": "stable",
+    "prereqs": {
+        "runtime": {
+            "requires": {
+                "PostgreSQL": "9.2.0"
+            }
+        }
+    },
+    "resources": {
+        "bugtracker": {
+            "web": "https://github.com/moat/generate_date_series/issues"
+        },
+        "repository": {
+            "url": "git://github.com/moat/generate_date_series.git" ,
+            "web": "https://github.com/moat/generate_date_series",
+            "type": "git"
+        }
+    },    
+    "meta-spec": {
+        "version": "1.0.0",
+        "url": "http://pgxn.org/meta/spec.txt"
+    },
+    "tags": [
+        "parallel",
+        "meta"
+        ]
+}

@@ -1,0 +1,5 @@
+# generate_date_series extension
+default_version = '1.0.0'
+comment = 'generate_series() for pure date values'
+relocatable = true
+module_pathname = '$libdir/generate_date_series'
